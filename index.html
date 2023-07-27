@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="calculator">
+    <h1>Calculadora</h1>
+    <input type="text" id="result" readonly>
+    <table>
+      <tr>
+        <td><button class="number" onclick="appendNumber('7')">7</button></td>
+        <td><button class="number" onclick="appendNumber('8')">8</button></td>
+        <td><button class="number" onclick="appendNumber('9')">9</button></td>
+        <td><button class="operator" onclick="appendOperator('+')">+</button></td>
+      </tr>
+      <tr>
+        <td><button class="number" onclick="appendNumber('4')">4</button></td>
+        <td><button class="number" onclick="appendNumber('5')">5</button></td>
+        <td><button class="number" onclick="appendNumber('6')">6</button></td>
+        <td><button class="operator" onclick="appendOperator('-')">-</button></td>
+      </tr>
+      <tr>
+        <td><button class="number" onclick="appendNumber('1')">1</button></td>
+        <td><button class="number" onclick="appendNumber('2')">2</button></td>
+        <td><button class="number" onclick="appendNumber('3')">3</button></td>
+        <td><button class="operator" onclick="appendOperator('*')">*</button></td>
+      </tr>
+      <tr>
+        <td><button class="number" onclick="appendNumber('0')">0</button></td>
+        <td><button class="clear" onclick="clearResult()">C</button></td>
+        <td><button class="equals" onclick="calculate()">=</button></td>
+        <td><button class="operator" onclick="appendOperator('/')">/</button></td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="history">
+    <h2>Historial de Operaciones</h2>
+    <ul id="historyList"></ul>
+    <button class="clear-history" onclick="clearHistory()">Limpiar Historial</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
